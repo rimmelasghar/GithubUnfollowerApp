@@ -3,10 +3,9 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from load import Load
-import webbrowser
 
 
-# @st.cache_data
+@st.cache_data
 def verify_user(username):
    api_url=f"https://api.github.com/users/{username}"
    res = requests.get(api_url)
@@ -23,7 +22,7 @@ def get_unfollowers(lsta,lstb):
          lst.append(i)
    return lst
 
-# @st.cache_data
+@st.cache_data
 def generate(username):
    follower_lst = Load(f"{username}","followers").get_data()
    following_lst = Load(f"{username}","following").get_data()
