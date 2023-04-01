@@ -15,6 +15,8 @@ def verify_user(username):
       return []
    else:
       return data
+   
+
 
 def get_unfollowers(lsta,lstb):
    lst = []
