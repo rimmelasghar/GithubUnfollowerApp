@@ -23,7 +23,7 @@ def get_unfollowers(lsta,lstb):
          lst.append(i)
    return lst
 
-@st.cache_data
+
 def generate(username):
    follower_lst = Load(f"{username}","followers").get_data()
    following_lst = Load(f"{username}","following").get_data()
